@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 17 may. 2021, 13:15:35
-    Author     : Franky
+    Author     : Fran
 --%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
