@@ -64,7 +64,7 @@
 
             conexion.close();
         %>
-        <form action="añadesuperheroe.jsp">
+        <form action="aniadesuperheroe.jsp">
             <small class="form-text text-muted">Pulsa añadir para insertar superheroes</small>
             <br><input id="Añadir" type="submit" value="Añadir"> 
         </form>
