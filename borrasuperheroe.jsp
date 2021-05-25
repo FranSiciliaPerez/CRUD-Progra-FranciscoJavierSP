@@ -8,6 +8,7 @@
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8"); %>
 
 <!DOCTYPE html>
 <html>
@@ -17,7 +18,6 @@
     </head>
     <body>
         <%
-            request.setCharacterEncoding("UTF-8");
             int codigo = Integer.parseInt(request.getParameter("Codigo"));
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/marvel", "root", "");
             String borrado = "DELETE FROM superheroes WHERE Codigo =" + codigo;
@@ -26,5 +26,6 @@
             response.sendRedirect("index.jsp");
 
         %>
+
     </body>
 </html>

@@ -50,6 +50,10 @@
                         <td><%= listado.getString("Edad") %></td>
                         <td><%= listado.getString("Alias") %></td>
                         <td><%= listado.getString("Superpoder") %></td>
+                        <td>
+                            <a href="borrasuperheroe.jsp?Codigo=<%= listado.getString("Codigo") %>">
+                            <input id="Borrar" type="submit" value="Borrar">
+                        </td>
                     </tr>
                     
                     
@@ -61,7 +65,8 @@
                     <small class="form-text text-muted">Pulsa añadir para insertar superheroes</small>
                     <br><input id="Añadir" type="submit" value="Añadir"> 
                 </form>
-            </td></tr>
+            </td>
+           
        
         <%
             conexion.close();
