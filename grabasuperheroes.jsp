@@ -1,7 +1,6 @@
 <%-- 
-    Document   : grabasuperheroes
-    Created on : 18 may. 2021, 10:04:11
-    Author     : Franky
+    Document   : grabasuperheroes.jsp
+    Author     : Francisco Javier Sicilia Pérez
 --%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
@@ -30,6 +29,7 @@
                 request.getParameter("Edad"), // int
                 request.getParameter("Superpoder") // String
             };
+            
             int codigo =Integer.parseInt(params[0]);
             String alias = params[1];
             String nombre = params[2];
@@ -63,5 +63,9 @@
 
             conexion.close();
         %>
+        <form action="añadesuperheroe.jsp">
+            <small class="form-text text-muted">Pulsa añadir para insertar superheroes</small>
+            <br><input id="Añadir" type="submit" value="Añadir"> 
+        </form>
     </body>
 </html>

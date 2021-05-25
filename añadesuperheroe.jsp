@@ -1,7 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : 17 may. 2021, 13:15:35
-    Author     : Fran
+    Document   : añadirsuperheroe.jsp
+    Author     : Francisco Javier Sicilia Pérez
 --%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
