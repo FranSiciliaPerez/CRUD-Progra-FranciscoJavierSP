@@ -1,6 +1,7 @@
 <%-- 
-    Document   : añadirsuperheroe.jsp
-    Author     : Francisco Javier Sicilia Pérez
+    Document   : modificarsuperheroe
+    Created on : 26 may. 2021, 9:44:53
+    Author     : Franky
 --%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
@@ -9,12 +10,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("UTF-8"); %>
 
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Añadir Superheroes</title>
+        <title>Modificar Superheroes</title>
         <style>
             body{
                 background-position: 55%;
@@ -37,39 +38,40 @@
         </style>
     </head>
     <body>
-        <h1>Añadir Superheroe</h1>
+         <body>
+        <h1>Modificar Superheroe</h1>
             <section id="hero">
-                <form action="grabasuperheroe.jsp">
+                <form action="actualizasuperheroe.jsp">
                  <div>
-                    <input type="number" class="form-control" required name="Codigo" aria-describedby="Codigo" placeholder="Codigo">
-                    <small id="superheroes" class="form-text text-muted">Codigo Superheroe</small><br>
-                </div>
-                <div>
-                    <input type="text" class="form-control" required name="Alias" aria-describedby="Alias" placeholder="Alias">
-                    <small id="superheroes" class="form-text text-muted">Introduce el alias</small><br>
+                     <input type="hidden" class="form-control" required value="<%= request.getParameter("Codigo") %>" required name="Codigo" aria-describedby="Codigo" placeholder="Codigo">
                 </div>
                 <div class="form-group mx-auto col-sm-6">
                     <br><label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" required name="Nombre" aria-describedby="Nombre" placeholder="Nombre">
+                    <input type="text" class="form-control" required value="<%= request.getParameter("Nombre") %>" name="Nombre" aria-describedby="Nombre" placeholder="Nombre">
                     <small id="superheroes" class="form-text text-muted">Introduce el nombre</small><br>
                 </div>
                 <div class="form-group mx-auto col-sm-6">
                     <br><label for="apellidos">Apellidos</label>
-                    <input type="text" class="form-control" required name="Apellidos" aria-describedby="Apellidos" placeholder="Apellidos">
+                    <input type="text" class="form-control" required value="<%= request.getParameter("Apellidos") %>" name="Apellidos" aria-describedby="Apellidos" placeholder="Apellidos">
                     <small id="superheroes" class="form-text text-muted">Introduce los apellidos</small><br>
                 </div>
                 <div class="form-group mx-auto col-sm-6">
                     <br><label for="edad">Edad</label>
-                    <input type="number" class="form-control" required name="Edad" placeholder="Edad">
+                    <input type="number" class="form-control" required value="<%= request.getParameter("Edad") %>" name="Edad" placeholder="Edad">
                     <small id="superheroes" class="form-text text-muted">Introduce la edad</small><br>
+                </div>
+                <div>
+                    <input type="text" class="form-control" required value="<%= request.getParameter("Alias") %>" name="Alias" aria-describedby="Alias" placeholder="Alias">
+                    <small id="superheroes" class="form-text text-muted">Introduce el alias</small><br>
                 </div>
                 <div class="form-group mx-auto col-sm-6">
                     <br><label for="superpoderes">Superpoderes</label>
-                    <input type="text" class="form-control" required name="Superpoder" aria-describedby="Superpoderes" placeholder="Fecha de nacimiento">
+                    <input type="text" class="form-control" required value="<%= request.getParameter("Superpoder") %>" name="Superpoder" aria-describedby="Superpoderes" placeholder="Fecha de nacimiento">
                     <small id="superheroes" class="form-text text-muted">Introduce las habilidades y poderes</small><br>
                 </div>
                 <br><input id="aceptar" type="submit" value="Aceptar">
                 </form>
             </section>  
+    </body>
     </body>
 </html>

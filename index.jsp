@@ -50,6 +50,11 @@
                         <td><%= listado.getString("Edad") %></td>
                         <td><%= listado.getString("Alias") %></td>
                         <td><%= listado.getString("Superpoder") %></td>
+                         <td>
+                            <a href="modificarsuperheroe.jsp?Codigo=<%= listado.getString("Codigo")%>&Nombre=<%= listado.getString("Nombre")%>&Apellidos=<%= listado.getString("Apellidos")%>&Edad=<%= listado.getString("Edad")%>&Alias=<%= listado.getString("Alias")%>&Superpoder=<%= listado.getString("Superpoder")%>">
+                            <input id="Editar" type="submit" value="Editar">
+                        </td>
+
                         <td>
                             <a href="borrasuperheroe.jsp?Codigo=<%= listado.getString("Codigo") %>">
                             <input id="Borrar" type="submit" value="Borrar">
