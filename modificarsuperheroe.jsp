@@ -41,6 +41,11 @@
          <body>
         <h1>Modificar Superheroe</h1>
             <section id="hero">
+                
+                <%
+                    
+                   try {
+                %>   
                 <form action="actualizasuperheroe.jsp">
                  <div>
                      <input type="hidden" class="form-control" required value="<%= request.getParameter("Codigo") %>" required name="Codigo" aria-describedby="Codigo" placeholder="Codigo">
@@ -71,6 +76,22 @@
                 </div>
                 <br><input id="aceptar" type="submit" value="Aceptar">
                 </form>
+                    
+                    
+                <%
+                    
+                     } catch(Exception e) {
+                
+                %>
+
+                <script>
+                    console.error( '<%= e %>' )
+                </script>
+
+                <%
+                    }
+                %>
+                    
             </section>  
     </body>
     </body>

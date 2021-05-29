@@ -2,6 +2,7 @@
     Document   : index.jsp
     Author     : Francisco Javier Sicilia Pérez
 --%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.DriverManager"%>
@@ -39,31 +40,34 @@
                 <th>Superpoder</th>
             </tr>
                     <%
+                        ArrayList<String> filas = new ArrayList<String>();
                         while ( listado.next() ) {
-                    %>
                     
                     
-                    <tr>
-                        <td><%= listado.getString("Codigo") %></td>
-                        <td><%= listado.getString("Nombre") %></td>
-                        <td><%= listado.getString("Apellidos") %></td>
-                        <td><%= listado.getString("Edad") %></td>
-                        <td><%= listado.getString("Alias") %></td>
-                        <td><%= listado.getString("Superpoder") %></td>
-                         <td>
-                            <a href="modificarsuperheroe.jsp?Codigo=<%= listado.getString("Codigo")%>&Nombre=<%= listado.getString("Nombre")%>&Apellidos=<%= listado.getString("Apellidos")%>&Edad=<%= listado.getString("Edad")%>&Alias=<%= listado.getString("Alias")%>&Superpoder=<%= listado.getString("Superpoder")%>">
-                            <input id="Editar" type="submit" value="Editar">
-                        </td>
+                    filas.add(
+                    "<tr>"
+                    + " <td>" + listado.getString("Codigo") + "</td>"
+                    + " <td>" + listado.getString("Nombre")  + "</td>"
+                    + " <td>" + listado.getString("Apellidos")  + "</td>"
+                    + " <td>" + listado.getString("Edad")  + "</td>"
+                    + " <td>" + listado.getString("Alias") + "</td>"
+                    + " <td>" + listado.getString("Superpoder")  + "</td>"
+                    + " <td>"
+                    + "        <a href='modificarsuperheroe.jsp?Codigo="+ listado.getString("Codigo")+ "&Nombre="+ listado.getString("Nombre")+"&Apellidos="+ listado.getString("Apellidos")+"&Edad="+ listado.getString("Edad")+"&Alias="+ listado.getString("Alias")+"&Superpoder="+ listado.getString("Superpoder")+"'>"
+                    + "         <input id='Editar' type='submit' value='Editar'>"
+                    + " </td>"
 
-                        <td>
-                            <a href="borrasuperheroe.jsp?Codigo=<%= listado.getString("Codigo") %>">
-                            <input id="Borrar" type="submit" value="Borrar">
-                        </td>
-                    </tr>
+                    + " <td>"
+                    + "      <a href='borrasuperheroe.jsp?Codigo="+ listado.getString("Codigo")+"'>"
+                    + "      <input id='Borrar' type='submit' value='Borrar'>"
+                    + " </td>"
+                    + " </tr>"
                     
-                    
-                    <%
-                        } 
+                    );
+
+                        }
+                        
+                        out.println(filas.get(0));
                     %>
             <td>
                 <form action="aniadesuperheroe.jsp">
