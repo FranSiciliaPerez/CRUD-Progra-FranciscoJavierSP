@@ -19,80 +19,82 @@
     </head>
     <style>
         th{text-align:left}
-        table th,td{border: 1px solid black;}
-    </style>
-    <body>
-        <div>Listado de super heroes:</div><br>
-        <%  try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/marvel", "root", "");
+        table th,td{border: 1px solid white;
+                    color: white;}
+        body {background-image: url(./imagenes/Fondo.png);
+              background-size:cover;
+              overflow: auto;
+               color: white;}
+        </style>
+        <body>
+            <div>Listado de super heroes:</div><br>
+            <%  try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                    Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/marvel", "root", "");
 
-            Statement s = conexion.createStatement();
-            ResultSet listado = s.executeQuery("SELECT * FROM superheroes");
-        %>
-        <table>
-            <tr>
-                <th>Codigo</th>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Edad</th>
-                <th>Alias</th>
-                <th>Superpoder</th>
-            </tr>
-                    <%
-                        ArrayList<String> filas = new ArrayList<String>();
-                        while ( listado.next() ) {
-                      
-                    
-                    filas.add(
-                    "<tr>"
-                    + " <td>" + listado.getString("Codigo") + "</td>"
-                    + " <td>" + listado.getString("Nombre")  + "</td>"
-                    + " <td>" + listado.getString("Apellidos")  + "</td>"
-                    + " <td>" + listado.getString("Edad")  + "</td>"
-                    + " <td>" + listado.getString("Alias") + "</td>"
-                    + " <td>" + listado.getString("Superpoder")  + "</td>"
-                    + " <td>"
-                    + "        <a href='modificarsuperheroe.jsp?Codigo="+ listado.getString("Codigo")+ "&Nombre="+ listado.getString("Nombre")+"&Apellidos="+ listado.getString("Apellidos")+"&Edad="+ listado.getString("Edad")+"&Alias="+ listado.getString("Alias")+"&Superpoder="+ listado.getString("Superpoder")+"'>"
-                    + "         <input id='Editar' type='submit' value='Editar'>"
-                    + " </td>"
+                    Statement s = conexion.createStatement();
+                    ResultSet listado = s.executeQuery("SELECT * FROM superheroes");
+            %>
+            <table>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Edad</th>
+                    <th>Alias</th>
+                    <th>Superpoder</th>
+                </tr>
+                <%
+                    ArrayList<String> filas = new ArrayList<String>();
+                    while (listado.next()) {
 
-                    + " <td>"
-                    + "      <a href='borrasuperheroe.jsp?Codigo="+ listado.getString("Codigo")+"'>"
-                    + "      <input id='Borrar' type='submit' value='Borrar'>"
-                    + " </td>"
-                    + " </tr>"
-                    
-                    );
+                        filas.add(
+                          "<tr>"
+                          + " <td>" + listado.getString("Codigo") + "</td>"
+                          + " <td>" + listado.getString("Nombre") + "</td>"
+                          + " <td>" + listado.getString("Apellidos") + "</td>"
+                          + " <td>" + listado.getString("Edad") + "</td>"
+                          + " <td>" + listado.getString("Alias") + "</td>"
+                          + " <td>" + listado.getString("Superpoder") + "</td>"
+                          + " <td>"
+                          + "        <a href='modificarsuperheroe.jsp?Codigo=" + listado.getString("Codigo") + "&Nombre=" + listado.getString("Nombre") + "&Apellidos=" + listado.getString("Apellidos") + "&Edad=" + listado.getString("Edad") + "&Alias=" + listado.getString("Alias") + "&Superpoder=" + listado.getString("Superpoder") + "'>"
+                          + "         <input id='Editar' type='submit' value='Editar'>"
+                          + " </td>"
+                          + " <td>"
+                          + "      <a href='borrasuperheroe.jsp?Codigo=" + listado.getString("Codigo") + "'>"
+                          + "      <input id='Borrar' type='submit' value='Borrar'>"
+                          + " </td>"
+                          + " </tr>"
+                        );
 
-                        }
-                        
-                        out.println(filas.get(0));
-                    %>
-            <td>
-                <form action="aniadesuperheroe.jsp">
-                    <small class="form-text text-muted">Pulsa añadir para insertar superheroes</small>
+                    }
+
+                    out.println(filas.get(0));
+                %>
+                <td>
+                    <form action="aniadesuperheroe.jsp">
+                        <small class="form-text text-muted">Pulsa añadir para insertar superheroes</small>
                     <br><input id="Añadir" type="submit" value="Añadir"> 
                 </form>
             </td>
-           
-       
-        <%
-            conexion.close();
-            
-            } catch(Exception e) {
-                
-        %>
-        
-        <script>
-            console.error( '<%= e %>' )
-        </script>
 
-        <%
-            }
-        %>
-       
 
-    </table>
-</body>
+            <%
+                conexion.close();
+
+            } catch (Exception e) {
+
+            %>
+
+            <script>
+                console.error('<%= e%>')
+            </script>
+
+            <%
+                }
+            %>
+
+
+        </table>
+    </body>
 </html>
