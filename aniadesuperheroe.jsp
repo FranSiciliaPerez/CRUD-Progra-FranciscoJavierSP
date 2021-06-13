@@ -7,7 +7,7 @@
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% request.setCharacterEncoding("UTF-8"); %>
+<% request.setCharacterEncoding("UTF-8");%>
 
 <!DOCTYPE html>
 <html>
@@ -15,32 +15,41 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Añadir Superheroes</title>
+        <link rel="icon" href="./imagenes/favicon.jpeg">
         <style>
-            body{
-                background-position: 55%;
-                padding-top: 50px;
-                min-height: 400px;
-            }
+            body {background-image: url(./imagenes/Fondo.png);
+                  background-size:cover;
+                  background-position: 55%;
+                  padding-top: 50px;
+                  min-height: 400px;
+                  overflow: auto;
+                  margin-top: 80px;
+                  margin-left:300px;
+                  margin-right: 100px;
+                  margin-bottom: 100px;
+                  color: white;}
             #hero{
                 margin-left: 50px;
-                
+
             }
             h1{text-align: left}
             input{
-                background-color: greenyellow;
+                background-color: orange;
+                border-color: red;
                 font-style: italic;
-                
+
             }
             #aceptar{
                 font-style: normal;
             }
+
         </style>
     </head>
     <body>
         <h1>Añadir Superheroe</h1>
-            <section id="hero">
-                <form action="grabasuperheroe.jsp">
-                 <div>
+        <section id="hero">
+            <form action="grabasuperheroe.jsp">
+                <div>
                     <input type="number" class="form-control" required name="Codigo" aria-describedby="Codigo" placeholder="Codigo">
                     <small id="superheroes" class="form-text text-muted">Codigo Superheroe</small><br>
                 </div>
@@ -65,11 +74,11 @@
                 </div>
                 <div class="form-group mx-auto col-sm-6">
                     <br><label for="superpoderes">Superpoderes</label>
-                    <input type="text" class="form-control" required name="Superpoder" aria-describedby="Superpoderes" placeholder="Fecha de nacimiento">
+                    <input type="text" class="form-control" required name="Superpoder" aria-describedby="Superpoderes" placeholder="Cuales y  en que consisten">
                     <small id="superheroes" class="form-text text-muted">Introduce las habilidades y poderes</small><br>
                 </div>
                 <br><input id="aceptar" type="submit" value="Aceptar">
-                </form>
-            </section>  
+            </form>
+        </section>  
     </body>
 </html>

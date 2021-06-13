@@ -1,7 +1,6 @@
 <%-- 
     Document   : borrasuperheroe
-    Created on : 20 may. 2021, 8:30:30
-    Author     : Franky
+    Author     : Francisco Javier Sicilia Pérez
 --%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>

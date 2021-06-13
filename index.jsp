@@ -15,19 +15,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Listado de super heroes</title>
+        <title>Listado de superheroes</title>
+        <link rel="icon" href="./imagenes/favicon.jpeg">
     </head>
     <style>
         th{text-align:left}
         table th,td{border: 1px solid white;
-                    color: white;}
+                    color: white;
+                    background-color: #ff6666
+                    }
         body {background-image: url(./imagenes/Fondo.png);
               background-size:cover;
               overflow: auto;
-               color: white;}
+              color: white;
+              margin-top: 200px;
+              margin-left:200px;}
         </style>
         <body>
-            <div>Listado de super heroes:</div><br>
+            <h1>Listado de superheroes:</h1><br>
             <%  try {
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/marvel", "root", "");
@@ -68,8 +73,10 @@
                         );
 
                     }
+                    for (int i = 0; i < filas.size(); i++) {
+                        out.println(filas.get(i));
+                    }
 
-                    out.println(filas.get(0));
                 %>
                 <td>
                     <form action="aniadesuperheroe.jsp">
@@ -79,8 +86,7 @@
             </td>
 
 
-            <%
-                conexion.close();
+            <%                conexion.close();
 
             } catch (Exception e) {
 
