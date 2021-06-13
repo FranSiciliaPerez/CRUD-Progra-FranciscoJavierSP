@@ -26,8 +26,10 @@
           margin-left:300px;
           margin-right: 100px;
           margin-bottom: 100px;
-          color: white;}</style>
+          color: white;}
+    </style>
         <body>
+            <h1>Superheroe modificado</h1>
             <%
 
                 String modificadatos = "";

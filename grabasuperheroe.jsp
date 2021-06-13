@@ -13,11 +13,36 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Confirmación añadir</title>
         <style>
             * {
                 font-family: Arial;
             }
+             body {background-image: url(./imagenes/Fondo.png);
+                  background-size:cover;
+                  background-position: 55%;
+                  padding-top: 50px;
+                  min-height: 400px;
+                  overflow: auto;
+                  margin-top: 80px;
+                  margin-left:300px;
+                  margin-right: 100px;
+                  margin-bottom: 100px;
+                  color: white;}
+            #hero{
+                margin-left: 50px;
+
+            }
+            h1{text-align: left}
+            input{
+                background-color: orange;
+                font-style: italic;
+
+            }
+            #aceptar{
+                font-style: normal;
+            }
+
        </style>
     </head>
     <body>
@@ -66,7 +91,7 @@
         %>
         <form action="aniadesuperheroe.jsp">
             <small class="form-text text-muted">Pulsa 'añadir' para insertar otro superheroe</small>
-            <br><input id="Añadir" type="submit" value="Añadir"> 
+            <br><input id="Añadir" type="submit" value="Añadir">
         </form>
          <form action="index.jsp">
             <small class="form-text text-muted">Pulsa 'volver' para regresar al listado de superheroes</small>
