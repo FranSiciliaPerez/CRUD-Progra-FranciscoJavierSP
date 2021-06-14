@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="icon" href="./imagenes/favicon.jpeg">
+        <title>Login de acceso a pagina principal </title>
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-width: 100%;
+            width: var(--fit-content);
+            min-height: 100vh;
+            height: var(--fit-content);
+            background-image: url(./imagenes/Fondo.png);
+            background-size: cover;
+            overflow: auto;
+        }
+
+        body {
+            /*padding: 2rem;*/
+            display: flex;
+        }
+
+        .formulario {
+            color: white;
+            width: 80vw;
+            margin: auto;
+            padding: 1rem;
+            border:rgb(145, 145, 151) 2px solid;
+            border-radius: 20px;
+            background-color: #ff6666;
+        }
+
+        .form-group {
+            width: 90%;
+            margin: auto;
+        }
+
+        input {
+            margin-bottom: 1rem;
+        }
+
+
+        .info {
+            display: none;
+            color: #f00;
+        }
+
+    </style>
+    <body>
+        <form action="login.jsp" class="formulario">
+            <div class="form-group usuario">
+                <label for="exampleInputEmail1">Introduzca un usuario(en formato correo)
+                </label>
+                <input autocomplete="off" type="text" class="form-control" name="usuario" id="usuario" aria-describedby="user"/>
+            </div>
+            <div class="form-group contraseña">
+                <label for="exampleInputPassword1">Introduce una contraseña (por su seguridad le recomendamos
+                    alterne entre letras mayúsculas y minúsculas junto a numeros y carácteres especiales)
+                </label>
+                <input type="password" class="form-control" name="contrasena" id="Contraseña"/>
+            </div>
+            <input class="submit" type="submit">
+        </form>
+    </body>
+</html>
