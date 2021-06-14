@@ -1,2 +1,2 @@
 # CRUD-Progra-FranciscoJavierSP
-Hola, buenas, esta aplicacion sirve para almacenar informacion de los superheroes, editarla modificarla y eliminarla
+Hola, buenas, esta aplicacion se llama Listado de Superheroes(Marvel) y sirve para almacenar informacion sobre los superheroes
