@@ -12,8 +12,8 @@ Si presionamos el boton añadir, se nos abrirá una pestaña nueva, donde aparec
 ![confimacion superheroe añadido](https://user-images.githubusercontent.com/72436014/121830746-01c1c880-ccc6-11eb-95f3-ff8e298c0271.png)
 
 Si presionamos el boton de editar, se nos abrirá una pestaña nueva, en la que aparecerá los campos rellenos con los datos del superheroe seleccionado y simplemente escribiendo otra vez el dato o lo que se desee cambiar, se modificaria:![Modificar](https://user-images.githubusercontent.com/72436014/121830892-6aa94080-ccc6-11eb-89db-d3de62e8d1ab.png)
-Una vez modificado y le damos al botón aceptar, nos aparece una pagina en la que se confirma la modificación y nos da la opcion de nuevo de volver al inicio:
+Una vez modificado y le damos al botón aceptar, nos aparece una pagina en la que se confirma la modificación y nos da de nuevo la opción de volver al inicio:
 ![confirmacion de la modificacion](https://user-images.githubusercontent.com/72436014/121830993-aba15500-ccc6-11eb-9f00-9c7bfc361a5b.png)
 
-Por último si presionamos el botón "borrar", automaticamente, se eliminará toda la fila que etuviera a la altura del botón
+Y por último si presionamos el botón "borrar", automaticamente, se eliminará toda la fila que etuviera a la altura del botón
 ![borrado](https://user-images.githubusercontent.com/72436014/121831648-3cc4fb80-ccc8-11eb-9310-063bb3618967.png)
