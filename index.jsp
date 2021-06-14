@@ -22,7 +22,7 @@
         th{text-align:left}
         table th,td{border: 1px solid white;
                     color: white;
-                    background-color: #ff6666
+                    background-color: #ff6666;
                     }
         body {background-image: url(./imagenes/Fondo.png);
               background-size:cover;
