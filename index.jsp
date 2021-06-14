@@ -28,8 +28,8 @@
               background-size:cover;
               overflow: auto;
               color: white;
-              margin-top: 200px;
-              margin-left:200px;}
+              margin-top: 180px;
+              margin-left:180px;}
         </style>
         <body>
             <h1>Listado de superheroes:</h1><br>

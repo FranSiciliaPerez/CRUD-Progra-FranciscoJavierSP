@@ -21,12 +21,11 @@
                   background-size:cover;
                   background-position: 55%;
                   padding-top: 50px;
-                  min-height: 400px;
                   overflow: auto;
-                  margin-top: 80px;
+                  margin-top: 60px;
                   margin-left:300px;
                   margin-right: 100px;
-                  margin-bottom: 100px;
+                  margin-bottom: 50px;
                   color: white;}
             #hero{
                 margin-left: 50px;

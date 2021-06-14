@@ -13,14 +13,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Confirmación modificacion/es</title>
     </head>
     <style>
         body {background-image: url(./imagenes/Fondo.png);
           background-size:cover;
           background-position: 55%;
           padding-top: 50px;
-          min-height: 400px;
           overflow: auto;
           margin-top: 80px;
           margin-left:300px;
