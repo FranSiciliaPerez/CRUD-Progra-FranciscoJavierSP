@@ -1,5 +1,6 @@
 # CRUD-Progra-FranciscoJavierSP
-Hola buenas, esta aplicacion se llama "Listado de Superheroes(Marvel)" y sirve para tener un registro de todos los superheroes junto con su informcion mas básica.
+Hola buenas, esta aplicacion se llama "Listado de Superheroes(Marvel)" y sirve para tener un registro de todos los superheroes junto con su informcion mas básica. 
+Enlace al video explicación de la aplicación: https://youtu.be/MffP629noN8
 
 Primero, empezamos en la pantalla de login:![login](https://user-images.githubusercontent.com/72436014/121830313-0df95600-ccc5-11eb-90be-7f02836b3e85.png)
 En la que necesitamos registrarnos con usuario y contraseña para poder acceder a la pagina principal.
