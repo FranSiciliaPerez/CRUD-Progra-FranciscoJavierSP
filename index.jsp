@@ -26,6 +26,7 @@
                     }
         body {background-image: url(./imagenes/Fondo.png);
               background-size:cover;
+              background-position: 55%;
               overflow: auto;
               color: white;
               margin-top: 180px;
