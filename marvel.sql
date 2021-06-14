@@ -3,6 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
+-- Tiempo de generación: 14-06-2021 a las 03:49:57
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.5
 
@@ -34,6 +35,14 @@ CREATE TABLE `autores` (
   `Superheroe` varchar(40) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Volcado de datos para la tabla `autores`
+--
+
+INSERT INTO `autores` (`Codigo`, `Nombre`, `Apellidos`, `Edad`, `Superheroe`) VALUES
+(1, 'Stan', 'Lee', 89, 'Antorcha Humana'),
+(2, 'Jack', 'Kirby', 78, 'Galactus');
+
 -- --------------------------------------------------------
 
 --
@@ -54,9 +63,9 @@ CREATE TABLE `superheroes` (
 --
 
 INSERT INTO `superheroes` (`Nombre`, `Apellidos`, `Edad`, `Alias`, `Superpoder`, `Codigo`) VALUES
-('Steve', 'Rogers', 101, 'Capitán América', 'Suero super-soldado', 1),
+('Steve', 'Rogers', 102, 'Capitán América', 'Suero super-soldado', 1),
 ('Natasha', 'Romanoff', 87, 'Viuda negra', 'Suero super-soldado', 2),
-('Clinton', 'Francis', 5198, 'Ojo de halcón', 'Gran habilidad con el arco', 3);
+('Clinton', 'Francis', 51, 'Ojo de halcón', 'Gran habilidad con el arco', 3);
 
 --
 -- Índices para tablas volcadas
