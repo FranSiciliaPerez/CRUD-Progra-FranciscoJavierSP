@@ -18,3 +18,5 @@ Una vez modificado y le damos al botón aceptar, nos aparece una pagina en la qu
 
 Y por último si presionamos el botón "borrar", automaticamente, se eliminará toda la fila que etuviera a la altura del botón
 ![borrado](https://user-images.githubusercontent.com/72436014/121831648-3cc4fb80-ccc8-11eb-9310-063bb3618967.png)
+
+Gracias a todos por pasaros por este repositorio, si os ha gustado por favor dale una estrellita :)
