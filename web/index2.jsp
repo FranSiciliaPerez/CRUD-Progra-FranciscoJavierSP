@@ -1,151 +1,91 @@
 <%-- 
-    Document   : index2
-    Created on : 15 may. 2022, 20:50:46
-    Author     : Franky
---%>
-<%-- 
-    Document   : index.jsp
+    Document   : index(login)
     Author     : Francisco Javier Sicilia Pérez
 --%>
+
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% request.setCharacterEncoding("UTF-8"); %>
+<% request.setCharacterEncoding("UTF-8");%>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Listado</title>
+        <title>Login cambio acceso a modo administrador  </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <link rel="icon" href="./imagenes/favicon.jpeg">
     </head>
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-width: 100%;
+            width: var(--fit-content);
+            min-height: 100vh;
+            height: var(--fit-content);
+            background-image: url(./imagenes/fondo2.jpg);
+            background-size: cover;
+            overflow: auto;
+        }
         body {
-            background-image: url(./imagenes/fondo3.jpg);
-            background-size:cover;
-            overflow: auto;
-            overflow: auto;
+            /*padding: 2rem;*/
+            display: flex;
+        }
+        h2{
+            text-align: center
+        }
+        .formulario {
             color: white;
-            margin-top: 180px;
-            margin-left: 180px;
+            width: 80vw;
+            margin: auto;
+            padding: 1rem;
+            border:rgb(145, 145, 151) 2px solid;
+            border-radius: 20px;
+            background-color: #6C88A3;
         }
-        h1{
-            background-color: #0099ff;
-            border: 1px solid white;
-            margin-right: 70%;
-            overflow: auto;
+        .form-group {
+            width: 90%;
+            margin: auto;
         }
-        table th,td{
-            border: 1px solid white;
-            color: black;
-            background-color: #0099ff;
+
+        input {
+            margin-bottom: 1rem;
         }
-        footer{
-            border: 1px solid white;
-            overflow: auto;
-            margin-top: 5%;
-            margin-left: 30%;
-            margin-right: 30%;
-            color: black;
-            background-color: #0099ff;
-        }
+
     </style>
     <body>
-        <%  try {
-                Class.forName("com.mysql.jdbc.Driver");
-                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/marvel", "root", "");
 
-                Statement s = conexion.createStatement();
-                ResultSet listado = s.executeQuery("SELECT * FROM superheroes");
-                Statement d = conexion.createStatement();
-                ResultSet listado2 = d.executeQuery("SELECT * FROM autores");
+        <%            
+            if (session.getAttribute("error") != null) { //compruebo si hay algún error
+                if (session.getAttribute("error").equals("Lo siento, usuario o contraseña incorrectos")) { 
+                    session.setAttribute("error", "null");
+                    out.print("<script type=\"text/javascript\">alert(\"Lo siento, acceso denegado, usuario o contraseña incorrectos\");</script>");
+                }
+            }
         %>
-        <h1>Listado de superheroes:</h1>
-        <table>
-            
-            <tr>
-                <th>Codigo</th>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Edad</th>
-                <th>Alias</th>
-                <th>Superpoder</th>
-            </tr>
-            <%
-                ArrayList<String> filas = new ArrayList<String>();
-                while (listado.next()) {
-
-                    filas.add(
-                            "<tr>"
-                            + " <td>" + listado.getString("Codigo") + "</td>"
-                            + " <td>" + listado.getString("Nombre") + "</td>"
-                            + " <td>" + listado.getString("Apellidos") + "</td>"
-                            + " <td>" + listado.getString("Edad") + "</td>"
-                            + " <td>" + listado.getString("Alias") + "</td>"
-                            + " <td>" + listado.getString("Superpoder") + "</td>"
-                            + " </tr>"
-                    );
-
-                }
-                for (int i = 0; i < filas.size(); i++) {
-                    out.println(filas.get(i));
-                }
-
-            %>
-            </table>
-            <h1>Listado de autores:</h1>
-
-            <table>
-                <tr>
-                    <th>Codigo</th>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>Edad</th>
-                    <th>Superheroe</th>
-                </tr>
-                <%
-                ArrayList<String> filas2 = new ArrayList<String>();
-                while (listado2.next()) {
-
-                    filas2.add(
-                            "<tr>"
-                            + " <td>" + listado2.getString("Codigo") + "</td>"
-                            + " <td>" + listado2.getString("Nombre") + "</td>"
-                            + " <td>" + listado2.getString("Apellidos") + "</td>"
-                            + " <td>" + listado2.getString("Edad") + "</td>"
-                            + " <td>" + listado2.getString("Superheroe") + "</td>"
-                            + " <td>"
-                            + " </tr>"
-                    );
-
-                }
-                for (int i = 0; i < filas2.size(); i++) {
-                    out.println(filas2.get(i));
-                }
-
-            %>
-            </table>
-            <%                conexion.close();
-
-            } catch (Exception e) {
-
-            %>
-
-            <script>
-                console.error('<%= e%>');
-            </script>
-
-            <%
-                }
-            %>
-        
+        <form method="get" action="confirmalogin.jsp" class="formulario">
+            <h2>¡Bienvenido a la pagina de login! <br>Identifiquese para poder acceder al listado Marvel en modo administrador</h2>
+            <div class="form-group usuario">
+                <label for="exampleInputEmail1">Introduzca el nombre de usuario</label>
+                <input autocomplete="off" type="text" class="form-control" name="usuario" id="usuario" aria-describedby="user"/>
+            </div>
+            <div class="form-group contrasena">
+                <label for="exampleInputPassword1">Introduzca la contraseña</label>
+                <input type="password" class="form-control" name="contrasena" id="contrasena"/>
+            </div>
+            <input class="submit" type="submit">
+            <input id="Salir" type="submit" value="Volver al inicio">
+        </form>
         <form action="index.jsp">
-            <input id="Cerrar sesión" type="submit" value="Cerrar sesión">
+            <input id="Salir" type="submit" value="Volver al inicio">
         </form>
     </body>
-    <footer>Pagina realizada por Francisco Javier Sicilia Pérez</footer>
 </html>

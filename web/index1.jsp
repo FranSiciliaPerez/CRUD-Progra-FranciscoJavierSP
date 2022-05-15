@@ -1,3 +1,9 @@
+
+<%-- 
+    Document   : index2
+    Created on : 15 may. 2022, 20:50:46
+    Author     : Franky
+--%>
 <%-- 
     Document   : index.jsp
     Author     : Francisco Javier Sicilia Pérez
@@ -15,7 +21,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Listado administrador</title>
+        <title>Listado</title>
         <link rel="icon" href="./imagenes/favicon.jpeg">
     </head>
     <style>
@@ -28,7 +34,14 @@
             margin-top: 180px;
             margin-left: 180px;
         }
-        h1,h2{
+        h1{
+            background-color: #0099ff;
+            border: 1px solid white;
+            margin-right: 80px;
+            margin-left: 6px;
+            text-align:center;
+        }
+        h2{
             background-color: #0099ff;
             border: 1px solid white;
             margin-right: 70%;
@@ -59,8 +72,8 @@
                 Statement d = conexion.createStatement();
                 ResultSet listado2 = d.executeQuery("SELECT * FROM autores");
         %>
-        <h1>Bienvenido al modo administrador</h1>
-        <h2>Listado de superheroes:</h2>
+        <h1>Bienvenido al listado de superheroes y autores de Marvel</h1>
+        <h2>Listado de superheroes:</h1>
         <table>
             
             <tr>
@@ -83,14 +96,6 @@
                             + " <td>" + listado.getString("Edad") + "</td>"
                             + " <td>" + listado.getString("Alias") + "</td>"
                             + " <td>" + listado.getString("Superpoder") + "</td>"
-                            + " <td>"
-                            + "        <a href='modificarsuperheroe.jsp?Codigo=" + listado.getString("Codigo") + "&Nombre=" + listado.getString("Nombre") + "&Apellidos=" + listado.getString("Apellidos") + "&Edad=" + listado.getString("Edad") + "&Alias=" + listado.getString("Alias") + "&Superpoder=" + listado.getString("Superpoder") + "'>"
-                            + "         <input id='Editar' type='submit' value='Editar'>"
-                            + " </td>"
-                            + " <td>"
-                            + "      <a href='borrasuperheroe.jsp?Codigo=" + listado.getString("Codigo") + "'>"
-                            + "      <input id='Borrar' type='submit' value='Borrar'>"
-                            + " </td>"
                             + " </tr>"
                     );
 
@@ -100,13 +105,8 @@
                 }
 
             %>
-            <td>
-                <form action="aniadesuperheroe.jsp">
-                    <input id="Añadir" type="submit" value="Añadir"> 
-                </form>
-                        </td>
             </table>
-            <h2>Listado de autores:</h2>
+            <h2>Listado de autores:</h1>
 
             <table>
                 <tr>
@@ -128,13 +128,6 @@
                             + " <td>" + listado2.getString("Edad") + "</td>"
                             + " <td>" + listado2.getString("Superheroe") + "</td>"
                             + " <td>"
-                            + "        <a href='modificaautor.jsp?Codigo=" + listado2.getString("Codigo") + "&Nombre=" + listado2.getString("Nombre") + "&Apellidos=" + listado2.getString("Apellidos") + "&Edad=" + listado2.getString("Edad") + "&Superheroe=" + listado2.getString("Superheroe") + "'>"
-                            + "         <input id='Editar' type='submit' value='Editar'>"
-                            + " </td>"
-                            + " <td>"
-                            + "      <a href='borraautor.jsp?Codigo=" + listado2.getString("Codigo") + "'>"
-                            + "      <input id='Borrar' type='submit' value='Borrar'>"
-                            + " </td>"
                             + " </tr>"
                     );
 
@@ -144,11 +137,6 @@
                 }
 
             %>
-                <td>
-                    <form action="aniadeautor.jsp">
-                        <input id="Añadir" type="submit" value="Añadir"> 
-                    </form>
-                </td>
             </table>
             <%                conexion.close();
 
@@ -164,8 +152,8 @@
                 }
             %>
         
-        <form action="index2.jsp">
-            <input id="Cerrar sesión" type="submit" value="Cerrar sesión">
+        <form action="index.jsp">
+            <input id="Salir" type="submit" value="Volver al inicio">
         </form>
     </body>
     <footer>Pagina realizada por Francisco Javier Sicilia Pérez</footer>
