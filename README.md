@@ -1,6 +1,6 @@
 # CRUDMARVEL-Programacion
 Hola buenas, esta aplicación se llama "CRUD MARVEL(Listado de Superheroes y Autores de Marvel)" y sirve como su nombre indica, para tener un registro de todos los superheroes y autores junto con su informcion mas básica. Así pues, la pagina está planteada para que cualquier persona pueda ver las listas de superheroes y autores de Marvel, y solo el administrador pueda ser el unico que tenga permiso para añadir, modificar y eliminar cualquier dato en las tablas.
-Enlace al video explicación de la aplicación: https://youtu.be/MffP629noN8
+Enlace al video explicación de la aplicación: https://youtu.be/s6zgx8w0pSA
 
 Cuando entramos en el index.jsp nos encontramos con una pagina de inicio/home, en la que se encuentran 2 botones. El primer botón tal y como se indica en la pagina, te redirigirá a donde están los listados de los superheroes y los autores(este será un listado visible para cualquier usuario que desee verlo). Y otro boton que nos indica que si pulsamos en él, vamos a ir al modo administrador.![inicio](https://user-images.githubusercontent.com/72436014/168630973-bb99801a-7359-4476-9ce9-eae43823008f.jpg)
 
