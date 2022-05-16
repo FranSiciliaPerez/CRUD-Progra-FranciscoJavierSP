@@ -24,7 +24,9 @@ Una vez modificado y le damos al botón aceptar, nos aparece una pagina en la qu
 ![confirma_modifica](https://user-images.githubusercontent.com/72436014/168637765-82cf2f6a-fc46-491d-a039-b651210a5b5e.jpg)
 
 
-Y por último si presionamos el botón "borrar", automaticamente, se eliminará toda la fila que etuviera a la altura del botón
-![borrado](https://user-images.githubusercontent.com/72436014/121831648-3cc4fb80-ccc8-11eb-9310-063bb3618967.png)
+Y por último si presionamos el botón "borrar", automaticamente, se eliminará toda la fila que etuviera a la altura del botón:
+![borrado](https://user-images.githubusercontent.com/72436014/168638553-2778aaf2-d343-4279-8795-1121d3bf5aed.jpg)
+![ver_borrado](https://user-images.githubusercontent.com/72436014/168638591-80ab62d5-571e-4338-b47f-0bd7bcb9093b.jpg)
+
 
 Gracias a todos por pasaros por este repositorio, si os ha gustado por favor dale una estrellita :)
