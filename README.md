@@ -6,8 +6,10 @@ Cuando entramos en el index.jsp nos encontramos con una pagina de inicio/home, e
 
 Si pulsamos el boton -Listado Marvel-, se nos abrirá la pagina de listado en la que apareceran dos tablas una mostrando los datos de los superheores y otra con los autores, ademas de un botón debajo de las tablas por si quiere regresar al inicio.![listado](https://user-images.githubusercontent.com/72436014/168631809-6b3a54f1-c09e-4c5f-8716-db64c4d4a02b.jpg)
 
+Tambien si pulsamos el boton en la pagina de incio/home, se abrirá otra página donde aparecerá un login que será obligtorio realizar para poder acceder al modo administrador, ya que este modo está restringido como su nombre indica, al/los administrador/es.![login](https://user-images.githubusercontent.com/72436014/168632928-931e16dc-7775-4cb1-a2ae-da2151f88069.jpg)
 
-Primero, empezamos en la pantalla de login:![login](https://user-images.githubusercontent.com/72436014/121830313-0df95600-ccc5-11eb-90be-7f02836b3e85.png)
+
+Primero, empezamos en la pantalla de login:
 En la que necesitamos registrarnos con usuario y contraseña para poder acceder a la pagina principal.
 Procedemos a registrarnos, le damos a aceptar y nos lleva a la pagina principal, donde está el listado de todos los superheroes que figuran en la base de datos:![inicio](https://user-images.githubusercontent.com/72436014/121830388-3aad6d80-ccc5-11eb-9218-bda2762bd1d9.png)
 
