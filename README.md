@@ -8,12 +8,9 @@ Si pulsamos el boton -Listado Marvel-, se nos abrirá la pagina de listado en la
 
 Tambien si pulsamos el boton en la pagina de incio/home, se abrirá otra página donde aparecerá un login que será obligtorio realizar para poder acceder al modo administrador, ya que este modo está restringido como su nombre indica, al/los administrador/es.![login](https://user-images.githubusercontent.com/72436014/168632928-931e16dc-7775-4cb1-a2ae-da2151f88069.jpg)
 
+Una vez estamos en la pagina de login, solo se pueden hacer dos cosas, registrarse y pulsar o bien la tecla enter, o bien el boton de enviar para poder acceder a los listados como administrador; o pulsar el boton de volver al inicio.
 
-Primero, empezamos en la pantalla de login:
-En la que necesitamos registrarnos con usuario y contraseña para poder acceder a la pagina principal.
-Procedemos a registrarnos, le damos a aceptar y nos lleva a la pagina principal, donde está el listado de todos los superheroes que figuran en la base de datos:![inicio](https://user-images.githubusercontent.com/72436014/121830388-3aad6d80-ccc5-11eb-9218-bda2762bd1d9.png)
-
-Una vez estemos aqui, vemos tres botones, añadir, editar y borrar los superheroes de la lista.
+Procedemos a introducir el usuario y la contraseña del administrador(previamente registrada en la base de datos, en este caso en la tabla usuario) y nos redirige la pagina al listado de superheroes y autores al igual que si pulsabamos el boton -Listado Marvel- en la pagina inicio, solo que esta vez aparecen 3 botones en cada una de las tablas que nos serviran para insertar(el botón de añadir), modificar(el botón de editar), eliminar(el boton de borrar) y por ultimo cerrar sesión(un botón que nos manda de vuelta a la pagina de logueo).
 
 Si presionamos el boton añadir, se nos abrirá una pestaña nueva, donde aparecen todos los campos a rellenar para poder introducir el superheroe en la tabla. Una vez lo hallas rellenado todo, le das a aceptar y te redirige a otra pestaña que te confirma que se ha añadido con exito el superheroe y que te da la opción de o bien volver a la pagina de inicio, o bien volver a insertar otro superheroe::![Añadir super heroe](https://user-images.githubusercontent.com/72436014/121830514-7cd6af00-ccc5-11eb-8d4c-66f9cc77188b.png)
 
