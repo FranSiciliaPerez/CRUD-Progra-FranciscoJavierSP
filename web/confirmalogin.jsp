@@ -8,14 +8,14 @@
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Confirmar Login</title>
-        <link rel="icon" href="./imagenes/favicon.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Login</title>
+    <link rel="icon" href="./imagenes/favicon.jpeg">
     <body>
 
 
@@ -28,6 +28,7 @@
             Statement u = conexion.createStatement();
             ResultSet listado = s.executeQuery("SELECT * FROM usuario");
             boolean correcto = false;
+            
             while (listado.next()) {
                 if (request.getParameter("usuario").toString().equals(listado.getString("nomUsuario")) && request.getParameter("contrasena").toString().equals(listado.getString("contrasena"))) {
                     correcto = true;
@@ -35,13 +36,14 @@
                     ResultSet crudmarvel = u.executeQuery("SELECT * FROM usuario");
                     crudmarvel.next();
                     response.sendRedirect("listado.jsp");
+                    
                 }
             }
-            if (!correcto) { 
-                session.setAttribute("error", "Lo siento, usuario o contraseña incorrectos se le redirigirá a la pagina en modo usuario");
+            if (!correcto) {
+                session.setAttribute("error", "Lo siento, usuario o contraseña incorrectos");
                 response.sendRedirect("index2.jsp");
             }
         %>
-        
+
     </body>
 </html>
