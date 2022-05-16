@@ -4,7 +4,7 @@ Enlace al video explicación de la aplicación: https://youtu.be/MffP629noN8
 
 Cuando entramos en el index.jsp nos encontramos con una pagina de inicio/home, en la que se encuentran 2 botones. El primer botón tal y como se indica en la pagina, te redirigirá a donde están los listados de los superheroes y los autores(este será un listado visible para cualquier usuario que desee verlo). Y otro boton que nos indica que si pulsamos en él, vamos a ir al modo administrador.![inicio](https://user-images.githubusercontent.com/72436014/168630973-bb99801a-7359-4476-9ce9-eae43823008f.jpg)
 
-Si pulsamos el boton -Listado Marvel-, se nos abrirá la pagina de listado en la que apareceran dos tablas una mostrando los datos de los superheores y otra con los autores, ademas de un botón debajo de las tablas por si quiere regresar al inicio.![listado](https://user-images.githubusercontent.com/72436014/168631809-6b3a54f1-c09e-4c5f-8716-db64c4d4a02b.jpg)
+Si pulsamos el boton -Listado Marvel-, se nos abrirá la pagina de listado en la que aparecen dos tablas donde se muestran tanto los datos de los superheores como con los autores, ademas de un botón debajo de las tablas por si quiere regresar al inicio.![listado](https://user-images.githubusercontent.com/72436014/168631809-6b3a54f1-c09e-4c5f-8716-db64c4d4a02b.jpg)
 
 Tambien si pulsamos el boton en la pagina de incio/home, se abrirá otra página donde aparecerá un login que será obligtorio realizar para poder acceder al modo administrador, ya que este modo está restringido como su nombre indica, al/los administrador/es.![login](https://user-images.githubusercontent.com/72436014/168632928-931e16dc-7775-4cb1-a2ae-da2151f88069.jpg)
 
