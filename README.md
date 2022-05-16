@@ -16,7 +16,7 @@ Procedemos a introducir el usuario y la contraseña del administrador(previament
 
 Si presionamos el boton añadir, se nos abrirá una pestaña nueva, donde aparecen todos los campos a rellenar para poder introducir el superheroe en la tabla. Una vez lo hallas rellenado todo, le das a aceptar y te redirige a otra pestaña que te confirma que se ha añadido con exito el superheroe y que te da la opción de o bien volver a la pagina de inicio, o bien volver a insertar otro superheroe::![Añadir super heroe](https://user-images.githubusercontent.com/72436014/121830514-7cd6af00-ccc5-11eb-8d4c-66f9cc77188b.png)
 
-![confimacion superheroe añadido](https://user-images.githubusercontent.com/72436014/121830746-01c1c880-ccc6-11eb-95f3-ff8e298c0271.png)
+![confirma_insert](https://user-images.githubusercontent.com/72436014/168637124-aa9bed08-643c-4951-8079-3898aac6736e.jpg)
 
 Si presionamos el boton de editar, se nos abrirá una pestaña nueva, en la que aparecerá los campos rellenos con los datos del superheroe seleccionado y simplemente escribiendo otra vez el dato o lo que se desee cambiar, se modificaria:![Modificar](https://user-images.githubusercontent.com/72436014/121830892-6aa94080-ccc6-11eb-89db-d3de62e8d1ab.png)
 Una vez modificado y le damos al botón aceptar, nos aparece una pagina en la que se confirma la modificación y nos da de nuevo la opción de volver al inicio:
