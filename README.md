@@ -18,9 +18,11 @@ Si presionamos el boton añadir, se nos abrirá una pestaña nueva, donde aparec
 
 ![confirma_insert](https://user-images.githubusercontent.com/72436014/168637124-aa9bed08-643c-4951-8079-3898aac6736e.jpg)
 
-Si presionamos el boton de editar, se nos abrirá una pestaña nueva, en la que aparecerá los campos rellenos con los datos del superheroe seleccionado y simplemente escribiendo otra vez el dato o lo que se desee cambiar, se modificaria:![Modificar](https://user-images.githubusercontent.com/72436014/121830892-6aa94080-ccc6-11eb-89db-d3de62e8d1ab.png)
+Si presionamos el boton de editar, se nos abrirá una pestaña nueva, en la que aparecerán los campos rellenos con los datos del superheroe seleccionado y simplemente escribiendo otra vez el dato o lo que se desee cambiar, se modificaria:![modifica](https://user-images.githubusercontent.com/72436014/168637586-702b218d-48a8-4152-8896-1e18ace2a60e.jpg)
+
 Una vez modificado y le damos al botón aceptar, nos aparece una pagina en la que se confirma la modificación y nos da de nuevo la opción de volver al inicio:
-![confirmacion de la modificacion](https://user-images.githubusercontent.com/72436014/121830993-aba15500-ccc6-11eb-9f00-9c7bfc361a5b.png)
+![confirma_modifica](https://user-images.githubusercontent.com/72436014/168637765-82cf2f6a-fc46-491d-a039-b651210a5b5e.jpg)
+
 
 Y por último si presionamos el botón "borrar", automaticamente, se eliminará toda la fila que etuviera a la altura del botón
 ![borrado](https://user-images.githubusercontent.com/72436014/121831648-3cc4fb80-ccc8-11eb-9310-063bb3618967.png)
