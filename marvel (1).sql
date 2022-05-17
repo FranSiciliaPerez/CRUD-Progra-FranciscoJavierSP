@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `autores` (
-  `Codigo` int(11) NOT NULL,
+  `CodigoA` int(11) NOT NULL,
   `Nombre` varchar(30) COLLATE utf8_bin NOT NULL,
   `Apellidos` varchar(30) COLLATE utf8_bin NOT NULL,
   `Edad` int(11) NOT NULL,
@@ -45,8 +45,8 @@ CREATE TABLE `superheroes` (
   `Edad` int(3) DEFAULT NULL,
   `Alias` varchar(40) COLLATE utf8_bin NOT NULL,
   `Superpoder` text COLLATE utf8_bin NOT NULL,
-  `Codigo` int(11) NOT NULL
-  `autores_Codigo` int(11) NOT NULL
+  `CodigoS` int(11) NOT NULL
+  `CodigoA` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -------------------------------------------------------
 
@@ -65,14 +65,14 @@ CREATE TABLE `usuario` (
 -- Indices de la tabla `autores`
 --
 ALTER TABLE `autores`
-  ADD PRIMARY KEY (`Codigo`);
+  ADD PRIMARY KEY (`CodigoA`);
 
 --
 -- Indices de la tabla `superheroes`
 --
 ALTER TABLE `superheroes`
-  ADD PRIMARY KEY (`Codigo`),
-  ADD KEY `fk_superheroes_autores_idx` (`Codigo`);
+  ADD PRIMARY KEY (`CodigoS`),
+  ADD KEY `fk_superheroes_autores_idx` (`CodigoA`);
 
 --
 -- Indices de la tabla `usuario`
