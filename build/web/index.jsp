@@ -1,6 +1,5 @@
 <%-- 
     Document   : index
-    Created on : 16 may. 2022, 0:32:56
     Author     : Franky
 --%>
 

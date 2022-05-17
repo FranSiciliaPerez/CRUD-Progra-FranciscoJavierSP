@@ -48,7 +48,7 @@
                 request.getParameter("Superheroe") // String
             };
 
-            int codigo = Integer.parseInt(params[0]);
+            String codigo = params[0];
             String nombre = params[1];
             String apellidos = params[2];
             int edad = Integer.parseInt(params[3]);
@@ -58,13 +58,12 @@
                     = "INSERT INTO autores "
                     + "VALUES "
                     + "("
-                    + "'" + codigo + "', "
+                    + " " + codigo + ", "
                     + "'" + nombre + "', "
                     + "'" + apellidos + "', "
                     + edad + ", "
                     + "'" + superheroe + "'"
                     + ")";
-            
 
             Class.forName("com.mysql.jdbc.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/marvel", "root", "");

@@ -52,8 +52,7 @@
         <section id="hero">
             <form action="grabasuperheroe.jsp">
                 <div>
-                    <input type="number" class="form-control"  required name="Codigo" aria-describedby="Codigo" placeholder="Codigo">
-                    <small id="superheroes" class="form-text text-muted">Codigo Superheroe</small><br>
+                    <input type="hidden"class="form-control"  value=NULL name="Codigo" aria-describedby="Codigo">
                 </div>
                 <div>
                     <input type="text" class="form-control" required name="Alias" aria-describedby="Alias" placeholder="Alias">

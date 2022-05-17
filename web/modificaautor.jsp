@@ -1,5 +1,5 @@
 <%-- 
-    Document   : modificaautor
+    Document   : modificaautor.jsp
     Author     : Francisco Javier Sicilia Pérez
 --%>
 <%@page import="java.sql.Statement"%>
@@ -76,7 +76,7 @@
                     <small id="autores" class="form-text text-muted">Introduce la edad</small><br>
                 </div>
                 <div class="form-group mx-auto col-sm-6">
-                    <br><label for="superheroe">Superpoderes</label>
+                    <br><label for="superheroe">Superheroe</label>
                     <input type="text" class="form-control" required value="<%= request.getParameter("Superheroe")%>" name="Superheroe" aria-describedby="Superheroe" placeholder="Nombre superheroe">
                     <h3 id="autores" class="form-text text-muted">Introduce el superheroe que creó</h3><br>
                 </div>

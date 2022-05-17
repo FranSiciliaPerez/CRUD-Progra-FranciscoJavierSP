@@ -14,7 +14,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Añadir Superheroes</title>
+        <title>Añadir autores</title>
         <link rel="icon" href="./imagenes/favicon.jpeg">
         <style>
             body {
@@ -52,8 +52,7 @@
         <section id="hero">
             <form action="grabaautor.jsp">
                 <div>
-                    <input type="number" class="form-control" required name="Codigo" aria-describedby="Codigo" placeholder="Codigo">
-                    <small id="autores" class="form-text text-muted">Codigo autor</small><br>
+                    <input type="hidden"class="form-control"  value=NULL aria-describedby="Codigo">
                 </div>
                 <div class="form-group mx-auto col-sm-6">
                     <br><label for="nombre">Nombre</label>

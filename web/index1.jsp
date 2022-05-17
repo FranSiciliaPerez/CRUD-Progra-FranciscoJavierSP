@@ -1,11 +1,5 @@
-
 <%-- 
-    Document   : index2
-    Created on : 15 may. 2022, 20:50:46
-    Author     : Franky
---%>
-<%-- 
-    Document   : index.jsp
+    Document   : index1.jsp
     Author     : Francisco Javier Sicilia Pérez
 --%>
 <%@page import="java.util.ArrayList"%>
@@ -77,7 +71,6 @@
         <table>
 
             <tr>
-                <th>Codigo</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Edad</th>
@@ -90,7 +83,6 @@
 
                     filas.add(
                             "<tr>"
-                            + " <td>" + listado.getString("Codigo") + "</td>"
                             + " <td>" + listado.getString("Nombre") + "</td>"
                             + " <td>" + listado.getString("Apellidos") + "</td>"
                             + " <td>" + listado.getString("Edad") + "</td>"
@@ -110,7 +102,6 @@
 
             <table>
                 <tr>
-                    <th>Codigo</th>
                     <th>Nombre</th>
                     <th>Apellidos</th>
                     <th>Edad</th>
@@ -121,12 +112,10 @@
 
                         filas2.add(
                                 "<tr>"
-                                + " <td>" + listado2.getString("Codigo") + "</td>"
                                 + " <td>" + listado2.getString("Nombre") + "</td>"
                                 + " <td>" + listado2.getString("Apellidos") + "</td>"
                                 + " <td>" + listado2.getString("Edad") + "</td>"
                                 + " <td>" + listado2.getString("Superheroe") + "</td>"
-                                + " <td>"
                                 + " </tr>"
                         );
 

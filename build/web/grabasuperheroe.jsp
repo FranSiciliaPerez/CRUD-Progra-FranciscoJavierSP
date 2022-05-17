@@ -50,7 +50,7 @@
                 request.getParameter("Superpoder") // String
             };
 
-            int codigo = Integer.parseInt(params[0]);
+            String codigo = params[0];
             String alias = params[1];
             String nombre = params[2];
             String apellidos = params[3];

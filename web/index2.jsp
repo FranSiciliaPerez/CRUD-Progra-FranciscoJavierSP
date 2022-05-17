@@ -1,5 +1,5 @@
 <%-- 
-    Document   : index(login)
+    Document   : index2
     Author     : Francisco Javier Sicilia Pérez
 --%>
 

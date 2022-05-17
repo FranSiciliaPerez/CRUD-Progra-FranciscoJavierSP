@@ -1,5 +1,5 @@
 <%-- 
-    Document   : modificarsuperheroe
+    Document   : modificarsuperheroe.jsp
     Author     : Francisco Javier Sicilia Pérez
 --%>
 <%@page import="java.sql.Statement"%>

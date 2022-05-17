@@ -47,9 +47,8 @@
                         + " SET Nombre = '" + request.getParameter("Nombre") + "'"
                         + ", Apellidos = '" + request.getParameter("Apellidos") + "'"
                         + ", Edad = " + request.getParameter("Edad")
-                        + ", Superheroe = '" + request.getParameter("Superheroe") + "'" 
+                        + ", Superheroe = '" + request.getParameter("Superheroe") + "'"
                         + " WHERE Codigo = " + request.getParameter("Codigo");
-                        
 
                 s.execute(modificadatos);
         %>

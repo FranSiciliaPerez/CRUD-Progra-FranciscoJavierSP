@@ -1,5 +1,5 @@
 <%-- 
-    Document   : index.jsp
+    Document   : listado.jsp
     Author     : Francisco Javier Sicilia Pérez
 --%>
 <%@page import="java.util.ArrayList"%>
@@ -50,13 +50,8 @@
         }
     </style>
     <body>
-        //<%
-            //if (session.getAttribute("usuario") == null) {
-          //      session.setAttribute("error",  "Debe iniciar sesión para acceder a la página de perfil.");
-          //      response.sendRedirect("index2.jsp");
-          //  }
-       // %>
-        <%  try {
+        <%         
+          try {
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/marvel", "root", "");
 
@@ -70,7 +65,6 @@
         <table>
 
             <tr>
-                <th>Codigo</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Edad</th>
@@ -83,14 +77,13 @@
 
                     filas.add(
                             "<tr>"
-                            + " <td>" + listado.getString("Codigo") + "</td>"
                             + " <td>" + listado.getString("Nombre") + "</td>"
                             + " <td>" + listado.getString("Apellidos") + "</td>"
                             + " <td>" + listado.getString("Edad") + "</td>"
                             + " <td>" + listado.getString("Alias") + "</td>"
                             + " <td>" + listado.getString("Superpoder") + "</td>"
                             + " <td>"
-                            + "        <a href='modificarsuperheroe.jsp?Codigo=" + listado.getString("Codigo") + "&Nombre=" + listado.getString("Nombre") + "&Apellidos=" + listado.getString("Apellidos") + "&Edad=" + listado.getString("Edad") + "&Alias=" + listado.getString("Alias") + "&Superpoder=" + listado.getString("Superpoder") + "'>"
+                            + "        <a href='modificarsuperheroe.jsp?Nombre=" + listado.getString("Nombre") + "&Apellidos=" + listado.getString("Apellidos") + "&Edad=" + listado.getString("Edad") + "&Alias=" + listado.getString("Alias") + "&Superpoder=" + listado.getString("Superpoder") + "'>"
                             + "         <input id='Editar' type='submit' value='Editar'>"
                             + " </td>"
                             + " <td>"
@@ -116,7 +109,6 @@
 
         <table>
             <tr>
-                <th>Codigo</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Edad</th>
@@ -127,7 +119,6 @@
 
                     filas2.add(
                             "<tr>"
-                            + " <td>" + listado2.getString("Codigo") + "</td>"
                             + " <td>" + listado2.getString("Nombre") + "</td>"
                             + " <td>" + listado2.getString("Apellidos") + "</td>"
                             + " <td>" + listado2.getString("Edad") + "</td>"
@@ -168,10 +159,22 @@
         <%
             }
         %>
-
+        
         <form action="index2.jsp">
             <input id="Cerrar sesión" type="submit" value="Cerrar sesión">
         </form>
     </body>
     <footer>Pagina realizada por Francisco Javier Sicilia Pérez</footer>
 </html>
+
+
+
+
+
+
+<%
+             //if (session.getAttribute(request.getParameter("usuario")) == null) {
+             //  session.setAttribute("error",  "Debe iniciar sesión para acceder al modo adminstrador.");
+             //   response.sendRedirect("index2.jsp");
+             //}
+        %>

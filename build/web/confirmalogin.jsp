@@ -1,7 +1,6 @@
 <%-- 
-    Document   : login
-    Created on : 15 may. 2022, 17:04:32
-    Author     : Franky
+    Document   : confirmalogin
+    Author     : Fran
 --%>
 
 <%@page import="java.sql.Connection"%>
@@ -33,8 +32,10 @@
                 if (request.getParameter("usuario").toString().equals(listado.getString("nomUsuario")) && request.getParameter("contrasena").toString().equals(listado.getString("contrasena"))) {
                     correcto = true;
                     String name = request.getParameter("usuario");
-                    ResultSet crudmarvel = u.executeQuery("SELECT * FROM usuario");
-                    crudmarvel.next();
+                    ResultSet marvel = u.executeQuery("SELECT * FROM usuario");
+                    marvel.next();
+                    
+                    session.setAttribute("usuario", request.getParameter("usuario"));
                     response.sendRedirect("listado.jsp");
                     
                 }
