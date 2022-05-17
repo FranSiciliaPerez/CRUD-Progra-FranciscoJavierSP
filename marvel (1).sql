@@ -36,15 +36,6 @@ CREATE TABLE `autores` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Volcado de datos para la tabla `autores`
---
-
-INSERT INTO `autores` (`Codigo`, `Nombre`, `Apellidos`, `Edad`, `Superheroe`) VALUES
-(29130, 'e', 'd', 45, 'fd');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `superheroes`
 --
 
@@ -55,18 +46,9 @@ CREATE TABLE `superheroes` (
   `Alias` varchar(40) COLLATE utf8_bin NOT NULL,
   `Superpoder` text COLLATE utf8_bin NOT NULL,
   `Codigo` int(11) NOT NULL
+  `autores_Codigo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `superheroes`
---
-
-INSERT INTO `superheroes` (`Nombre`, `Apellidos`, `Edad`, `Alias`, `Superpoder`, `Codigo`) VALUES
-('Natasho', 'Romanoff', 87, 'Viuda negra', 'Suero super-soldado', 1),
-('Steve', 'Rogers', 87, 'Capitan America', 'Suero super-soldado', 2),
-('Natasha', 'Romanoff', 87, 'Viuda negra', 'Suero super-soldado', 3);
-
--- --------------------------------------------------------
+-------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `usuario`
@@ -78,16 +60,6 @@ CREATE TABLE `usuario` (
   `contrasena` varchar(20) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- Volcado de datos para la tabla `usuario`
---
-
-INSERT INTO `usuario` (`codUsuario`, `nomUsuario`, `contrasena`) VALUES
-(1, 'Fran', 'fran');
-
---
--- Índices para tablas volcadas
---
 
 --
 -- Indices de la tabla `autores`
@@ -99,8 +71,15 @@ ALTER TABLE `autores`
 -- Indices de la tabla `superheroes`
 --
 ALTER TABLE `superheroes`
-  ADD PRIMARY KEY (`Codigo`);
-COMMIT;
+  ADD PRIMARY KEY (`Codigo`),
+  ADD KEY `fk_superheroes_autores_idx` (`Codigo`);
+
+--
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`codUsuario`);
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
